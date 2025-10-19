@@ -11,6 +11,13 @@ npx pod-install
 
 > 💡 If you use the Expo managed workflow you will see "CocoaPods is not supported in this project" - this is fine, it's not necessary.
 
+## Architecture Support
+
+- **v1.x**: Only supports React Native **legacy architecture**
+- **v2.x**: Only supports React Native **new architecture** (Turbo Modules)
+
+Make sure to install the correct version based on your project's architecture configuration.
+
 ## Usage
 
 This library works as a polyfill for the global `crypto.getRandomValues`.
