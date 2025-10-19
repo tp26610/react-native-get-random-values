@@ -43,7 +43,13 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "Crypto.getRandomValues",
+    "crypto",
+    "get-random-values",
+    "getRandomValues",
+    "polyfill",
+    "react-native"
   ],
   "repository": {
     "type": "git",
