@@ -51,3 +51,11 @@ yarn prepare
 ```
 
 This rebuilds the library so the example app can use your latest changes.
+
+
+# Deployment
+
+```
+yarn release
+```
+
