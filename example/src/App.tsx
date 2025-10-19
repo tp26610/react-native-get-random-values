@@ -1,12 +1,18 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { useState } from 'react';
+import { Text, View, StyleSheet, Button } from 'react-native';
 import { multiply } from 'react-native-get-random-values';
 
-const result = multiply(3, 7);
-
 export default function App() {
+  const [randomValue, setRandomValue] = useState(0);
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        title="Generate Random Value"
+        onPress={() => {
+          setRandomValue(multiply(3, 7));
+        }}
+      />
+      <Text>Result: {randomValue}</Text>
     </View>
   );
 }
@@ -16,5 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    gap: 16,
+    backgroundColor: 'white',
   },
 });
