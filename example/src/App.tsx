@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { Text, View, Button, StyleSheet } from 'react-native';
-import { getRandomBase64 } from 'react-native-get-random-values';
+import {
+  getRandomBase64,
+  getRandomValues,
+} from 'react-native-get-random-values';
 
 export default function App() {
   const [randomBase64, setRandomBase64] = useState('');
   const [randomValuesStr, setRandomValuesStr] = useState('');
+  const [globalRandomValuesStr, setGlobalRandomValuesStr] = useState('');
   return (
     <View style={styles.container}>
       <Button
@@ -13,16 +17,25 @@ export default function App() {
           setRandomBase64(getRandomBase64(10));
         }}
       />
-      <Text>GetRandomBase64 Result: {randomBase64}</Text>
+      <Text>getRandomBase64 Result: {randomBase64}</Text>
       <Button
-        title="get random values (10 length array)"
+        title="get random values (5 length array)"
         onPress={() => {
-          const getRandomValues = (global.crypto as any).getRandomValues;
           const randomValues = getRandomValues(new Uint8Array(5));
           setRandomValuesStr(randomValues.join(','));
         }}
       />
-      <Text>GetRandomValues Result: {randomValuesStr}</Text>
+      <Text>getRandomValues Result: {randomValuesStr}</Text>
+      <Button
+        title="global get random values (5 length array)"
+        onPress={() => {
+          require('react-native-get-random-values'); // workaround for issue: global.crypto is not defined
+          const globalGetRandomValues = (global.crypto as any).getRandomValues;
+          const randomValues = globalGetRandomValues(new Uint8Array(5));
+          setGlobalRandomValuesStr(randomValues.join(','));
+        }}
+      />
+      <Text>global.getRandomValues Result: {globalRandomValuesStr}</Text>
     </View>
   );
 }

@@ -38,7 +38,9 @@ class QuotaExceededError extends Error {}
 /**
  * @param {Int8Array|Uint8Array|Int16Array|Uint16Array|Int32Array|Uint32Array|Uint8ClampedArray} array
  */
-function getRandomValues<T = TypedArray>(array: T): T {
+export function getRandomValues<T extends TypedArray = TypedArray>(
+  array: T
+): T {
   if (
     !(
       array instanceof Int8Array ||
