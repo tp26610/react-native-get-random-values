@@ -59,6 +59,7 @@ yarn prepare
 
 This rebuilds the library so the example app can use your latest changes.
 
+For detailed environment setup instructions, please refer to [CONTRIBUTING.md](CONTRIBUTING.md#development-workflow).
 
 # Deployment
 
