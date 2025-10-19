@@ -6222,6 +6222,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-base64-decode@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "fast-base64-decode@npm:1.0.0"
+  checksum: 4c59eb1775a7f132333f296c5082476fdcc8f58d023c42ed6d378d2e2da4c328c7a71562f271181a725dd17cdaa8f2805346cc330cdbad3b8e4b9751508bd0a3
+  languageName: node
+  linkType: hard
+
 "fast-content-type-parse@npm:^3.0.0":
   version: 3.0.0
   resolution: "fast-content-type-parse@npm:3.0.0"
@@ -10251,6 +10258,7 @@ __metadata:
     eslint: ^9.35.0
     eslint-config-prettier: ^10.1.8
     eslint-plugin-prettier: ^5.5.4
+    fast-base64-decode: ^1.0.0
     jest: ^29.7.0
     prettier: ^3.6.2
     react: 19.1.0
