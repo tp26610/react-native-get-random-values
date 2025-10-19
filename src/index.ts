@@ -1,5 +1,5 @@
 import GetRandomValues from './NativeGetRandomValues';
 
-export function multiply(a: number, b: number): number {
-  return GetRandomValues.multiply(a, b);
+export function getRandomBase64(a: number, b: number): number {
+  return GetRandomValues.getRandomBase64(a, b);
 }

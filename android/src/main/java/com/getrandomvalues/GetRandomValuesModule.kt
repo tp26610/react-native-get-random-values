@@ -13,7 +13,7 @@ class GetRandomValuesModule(reactContext: ReactApplicationContext) :
 
   // Example method
   // See https://reactnative.dev/docs/native-modules-android
-  override fun multiply(a: Double, b: Double): Double {
+  override fun getRandomBase64(a: Double, b: Double): Double {
     return a * b
   }
 

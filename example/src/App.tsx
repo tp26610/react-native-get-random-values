@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
-import { multiply } from 'react-native-get-random-values';
+import { getRandomBase64 } from 'react-native-get-random-values';
 
 export default function App() {
   const [randomValue, setRandomValue] = useState(0);
@@ -9,7 +9,7 @@ export default function App() {
       <Button
         title="Generate Random Value"
         onPress={() => {
-          setRandomValue(multiply(3, 7));
+          setRandomValue(getRandomBase64(3, 7));
         }}
       />
       <Text>Result: {randomValue}</Text>

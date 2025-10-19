@@ -1,7 +1,7 @@
 #import "GetRandomValues.h"
 
 @implementation GetRandomValues
-- (NSNumber *)multiply:(double)a b:(double)b {
+- (NSNumber *)getRandomBase64:(double)a b:(double)b {
     NSNumber *result = @(a * b);
 
     return result;
